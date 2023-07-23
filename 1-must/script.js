@@ -17,6 +17,7 @@
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題1 ***");
 
+
 test(isOdd(2), false);
 test(isOdd(5), true);
 test(isOdd(3), true);
@@ -45,6 +46,7 @@ test(isOdd(10), false);
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題2 ***");
+
 
 let testObj = {
   blue: "青",
@@ -104,11 +106,11 @@ test(addObj(testObj, "address", "Tokyo"), expectObj);
 /**
  * 【問題3】
  * 
- * 関数pickIndexを定義しましょう。
- * pickIndexは、数値型のデータが入っているindex番号だけを入れた配列を返します。
+ * 関数countAppleを定義しましょう。
+ * countAppleは、オブジェクトのvalueに"Apple"がいくつ入っているかをカウントして返します。
  * 
- * @param {Array<any>}
- * @returns {Array<number>}
+ * @param {Object}
+ * @returns {number}
  */
 
 // ここに関数を定義しましょう
@@ -117,10 +119,36 @@ test(addObj(testObj, "address", "Tokyo"), expectObj);
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題3 ***");
 
-test(pickIndex([0, 1, 2, 3]), [0, 1, 2, 3]);
-test(pickIndex([10, "11", 12, 13, "14"]), [0, 2, 3]);
-test(pickIndex([true, false, "true", 0]), [3]);
-test(pickIndex(["one", "two", "three"]), []);
+
+testObj = {
+  boo: "apple",
+  hoo: "grape",
+  woo: "apple"
+}
+
+test(countApple(testObj), 2);
+
+
+testObj = {
+  monkey: "banana",
+  elephant: "apple",
+  rabbit: "apple",
+  bear: "apple",
+  turtle: "cabbage",
+  hippopotamus: "apple"
+}
+
+test(countApple(testObj), 4);
+
+
+testObj = {
+  a: "one",
+  b: "two",
+  c: "three",
+  d: "four"
+}
+
+test(countApple(testObj), 0);
 
 
 
@@ -130,6 +158,34 @@ test(pickIndex(["one", "two", "three"]), []);
 
 /**
  * 【問題4】
+ * 
+ * 関数reverseを定義しましょう。
+ * reverseは、配列の要素の順番を逆にした配列を返します。
+ * 
+ * @param {Array<any>}
+ * @returns {Array<any>}
+ */
+
+// ここに関数を定義しましょう
+
+
+// ここからはテストなので変更を加えないでください
+console.log("*** 問題4 ***");
+
+
+test(reverse([1, 2, 3]), [3, 2, 1]);
+test(reverse([false, true, true]), [true, true, false]);
+test(reverse(["my", "job", "is", "engineer"]), ["engineer", "is", "job", "my"]);
+test(reverse(["zero"]), ["zero"]);
+
+
+
+////////////////////////
+
+
+
+/**
+ * 【問題5】
  * 
  * 関数diffNumberを定義しましょう。
  * diffNumberは、第一引数に配列と第二引数の配列を比べて、第二引数にはない要素を配列で返します。
@@ -143,7 +199,7 @@ test(pickIndex(["one", "two", "three"]), []);
 
 
 // ここからはテストなので変更を加えないでください
-console.log("*** 問題4 ***");
+console.log("*** 問題5 ***");
 
 
 let first = [1, 2, 3, 4, 5];
@@ -162,34 +218,6 @@ first = [true, false];
 second = [0, 1, 2];
 
 test(diffNumber(first, second), [true, false]);
-
-
-
-////////////////////////
-
-
-
-/**
- * 【問題5】
- * 
- * 関数reverseを定義しましょう。
- * reverseは、配列の要素の順番を逆にした配列を返します。
- * 
- * @param {Array<any>}
- * @returns {Array<any>}
- */
-
-// ここに関数を定義しましょう
-
-
-// ここからはテストなので変更を加えないでください
-console.log("*** 問題5 ***");
-
-
-test(reverse([1, 2, 3]), [3, 2, 1]);
-test(reverse([false, true, true]), [true, true, false]);
-test(reverse(["my", "job", "is", "engineer"]), ["engineer", "is", "job", "my"]);
-test(reverse(["zero"]), ["zero"]);
 
 
 
