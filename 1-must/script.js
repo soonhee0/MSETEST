@@ -107,7 +107,7 @@ test(addObj(testObj, "address", "Tokyo"), expectObj);
  * 【問題3】
  * 
  * 関数countAppleを定義しましょう。
- * countAppleは、オブジェクトのvalueに"Apple"がいくつ入っているかをカウントして返します。
+ * countAppleは、オブジェクトのvalueに"apple"がいくつ入っているかをカウントして返します。
  * 
  * @param {Object}
  * @returns {number}
